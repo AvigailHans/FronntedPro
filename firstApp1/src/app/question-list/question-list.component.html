@@ -1,0 +1,33 @@
+
+<article >
+<table class="table-dark">
+  <tr >
+    <td class="d-lg-table-row " ><button (click)="f()" class="btn btn-outline-primary ">search</button>
+      <input [(ngModel)]="search" >
+      <div  *ngIf="s==true; ">
+     <div    *ngFor="let l of questionsList|filterrr:search ;let i=index " >
+       <label > {{i+1}} {{l|short}}</label>
+       </div>
+      </div></td>
+  <td ><textarea class="form-control">{{myq}}</textarea>
+    
+    <button (click)="beforeQuestion()" class="btn btn-primary  btn-s" > <<</button>
+    <button (click)="nextQuestion()" class="btn btn-primary btn-s f" style="float:right"> >> </button>
+   <br>
+    <app-comment (Added)="onAdded($event)" *ngIf="d==true ;else wx"></app-comment>
+    <ng-template #wx>
+    <pre  style="color:steelblue" >
+     your rating 
+     level : {{c.g}} 
+     category : {{c.ss}} 
+     subcategory : {{c.sss}} 
+    </pre>
+  </ng-template>
+  </td>
+</tr>
+
+</table>
+
+</article>
+
+  <footer [ngClass]="{'hil':class=='true'}" class="card-footer">{{messege}} </footer >

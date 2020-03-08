@@ -1,0 +1,31 @@
+<br/>
+
+<form  form (ngSubmit)="onSubmitForm()" #signupForm="ngForm" class="b">
+<div ngModelGroup="name" class="form group">
+<label>first name :</label>
+<input appDirecive1={{fname}} [(ngModel)]="fname" name="fname" required class="form-control">
+<label>last name :</label>
+<input appDirecive1={{lname}} [(ngModel)]="lname" name="lname" required class="form-control">
+</div>
+<label>password  :</label>
+<input  appDirecive1={{password}} minlength="4" [(ngModel)]="password" name="password"  #pass="ngModel" required class="input" class="form-control">
+<span *ngIf="pass.invalid && pass.touched">
+        <br> insert at least 4 chars.</span>
+
+<div>
+<label>E-mail :</label>
+<input appDirecive1={{mail}} [(ngModel)]="mail" name="mail" required email type="email" #mailo="ngModel" class="form-control">
+<span *ngIf="mailo.invalid && mailo.touched &&mailo.value==''">
+        <br> this field is required</span>
+      <span *ngIf="mailo.invalid && mailo.touched &&mailo.value!=''">
+        <br>this is invalid email</span>
+</div>
+<label >school      :</label>
+<input appDirecive1="fdg" [(ngModel)]="school" name="school" class="form-control">
+<label >phone      :</label>
+<input appDirecive1="fdg" [(ngModel)]="phone" name="phone" class="form-control" appPhone>
+<br/>
+
+<button  type="submit" [disabled]="signupForm.invalid" routerLink="/main" routerLinkActive="activeLink" class="btn btn-outline-primary btn-lg">Login</button>
+</form>
+<router-outlet></router-outlet>

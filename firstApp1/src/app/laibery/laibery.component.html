@@ -1,0 +1,11 @@
+
+<!--<br>insert age <input  [(ngModel)]="gil">-->
+<app-book *ngFor="let b of booklist" [mybook]="b" (bookdeleted)="delete($event)" (added)="addsum($event)" >
+
+</app-book>
+<br>
+tota lending: <span #lable></span>
+<br>
+
+<button (click)="new=True">add new book</button>
+<app-new-book *ngIf="new==True" (newbook)="newToList($event)"></app-new-book>

@@ -1,0 +1,16 @@
+
+levele:
+<input type="number" min="0" max="5"  [(ngModel)]="g">
+<br>
+category:
+<select [(ngModel)]="sss" >
+  <option *ngFor="let l of q" [value]="l">{{l}}</option>
+   </select>
+   <br>
+subcategory:
+<select [(ngModel)]="ss" >
+    <option *ngFor="let l of q" [value]="l">{{l}}</option>
+  </select>
+  <br>
+  <button (click)="OnAdd()" class=" btn-outline-dark">O.K</button>
+  <br>

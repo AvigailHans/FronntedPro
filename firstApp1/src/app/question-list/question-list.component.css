@@ -1,0 +1,21 @@
+.hil{ background-color :#007bff ;
+font-size: 14px;
+color: #ffffff;
+height:10%;
+margin-top: 18%
+}
+article{
+   height: 60%;
+margin-left: 5%
+}
+
+textarea{
+height: 300px;
+width: 400px;
+
+}
+table{
+    margin-bottom:170px;
+  padding: 80px ;
+  margin:4%;
+}

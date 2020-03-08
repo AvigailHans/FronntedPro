@@ -1,0 +1,5 @@
+<div *ngFor="let l of myJokes.getLIst()|filterrr:search" [ngClass]=" {'hil':myJokes.selectedjoke==l}">
+
+<label  > {{l|short}}</label>
+</div>
+<input [(ngModel)]="search">

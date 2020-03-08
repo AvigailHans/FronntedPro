@@ -1,0 +1,17 @@
+<p>
+  market works!
+</p>
+<ul>  
+     <div *ngFor="let f of myfruit">
+                <div  *ngIf="sss=='all'||f.season==sss" style="size:400cm" [style.color]="f.color" [ngClass]="{'hil':f.ischeked==true,'off':f.ischeked==false}">{{f.name}}  {{f.color}}  </div>
+         </div>
+<select [(ngModel)]="sss">
+  <option value="0">summer</option>
+  <option value="1">winter</option>
+  <option value="2">allYear</option>
+   </select>
+   <div *ngFor="let w of myfruit"  > 
+    <input type="checkbox" checked="False" [(ngModel)]="w.ischeked"/>
+    <span>{{w.name}}  {{w.color}}</span>
+</div>
+</ul>
